@@ -40,3 +40,33 @@ export interface DateType  {
   setStartDate: (date: Date | null) => void;
   setEndDate: (date: Date | null) => void;
 };
+
+  export interface ChartOptions {
+    responsive: boolean;
+    plugins: {
+      legend: {
+        display: boolean;
+        position: "top";
+      };
+      title: {
+        display: boolean;
+        text: string;
+      };
+    };
+    scales: {
+      x: {
+        grid: { display: boolean };
+        ticks: {
+          callback: (
+            value: string | number,
+            index: number,
+            ticks: { value: number }[]
+          ) => string;
+        };
+      };
+      y: {
+        display: boolean;
+        grace: string
+      };
+    };
+  }

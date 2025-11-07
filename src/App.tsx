@@ -85,7 +85,7 @@ export default function Home() {
               </button>
             </div>
             <div className="w-[80%] h-[287px] flex items-end justify-start mt-2">
-              <ChartComponent />
+              <ChartComponent transactions={transactions ?? []} />
             </div>
           </div>
           <WalletTab data={wallet} loading={loadingWallet} />
