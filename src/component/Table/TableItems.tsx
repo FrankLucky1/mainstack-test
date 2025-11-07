@@ -24,7 +24,7 @@ const TableItems = ({ data }: Props) => {
               (data?.type ? `Cash ${data.type}` : "Product name missing")}
           </p>
           <p
-            className={`text-sm font-medium ${
+            className={`text-sm font-medium capitalize ${
               !data?.metadata && data.status === "successful"
                 ? "text-[#0EA163]"
                 : "text-[#56616B]"
