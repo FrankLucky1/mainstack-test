@@ -1,4 +1,3 @@
-import React from "react";
 import SlantArrowIcon from "../../assets/Icons/SlantArrowIcon";
 import type { Transaction } from "../../types/responseTypes";
 

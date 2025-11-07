@@ -1,4 +1,3 @@
-import React from "react";
 import SideBarIcon1 from "../assets/Icons/SideBarIcon1";
 import SideBarIcon2 from "../assets/Icons/SideBarIcon2";
 import SideBarIcon3 from "../assets/Icons/SideBarIcon3";

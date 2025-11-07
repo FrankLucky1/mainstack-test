@@ -1,4 +1,3 @@
-import React from "react";
 import InfoIcon from "../../assets/Icons/InfoIcon";
 // import { Loader } from "lucide-react";
 import Loader from "../Loader/Loader";

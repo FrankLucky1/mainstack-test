@@ -1,4 +1,4 @@
-import React from "react";
+
 import RecieptLong from "../../assets/Icons/RecieptLong";
 
 const NoDataComponent = () => {
