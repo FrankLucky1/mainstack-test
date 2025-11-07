@@ -16,6 +16,7 @@ import WalletTab from "./component/Wallet/WalletTab";
 import { ChevronDown } from "lucide-react";
 import DownloadIcon from "./assets/Icons/DownloadIcon";
 import TableItems from "./component/Table/TableItems";
+import NoDataComponent from "./component/NoData/NoDataComponent";
 
 export default function Home() {
   const { data: transactions, isLoading: loadingTransactions } =
@@ -129,10 +130,12 @@ export default function Home() {
         <div className="flex flex-col items-start justify-center w-full gap-8">
           {loadingTransactions ? (
             <Loader />
-          ) : (
-            transactions?.map((transaction, i) => (
+          ) : transactions && transactions.length > 0 ? (
+            transactions.map((transaction, i) => (
               <TableItems key={i} data={transaction} />
             ))
+          ) : (
+            <NoDataComponent />
           )}
         </div>
       </div>
