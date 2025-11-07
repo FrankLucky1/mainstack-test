@@ -127,7 +127,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="flex flex-col items-start justify-center w-full gap-8">
+        <div className="flex flex-col items-start justify-center w-full gap-8 mb-3">
           {loadingTransactions ? (
             <Loader />
           ) : transactions && transactions.length > 0 ? (
