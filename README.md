@@ -1,73 +1,94 @@
-# React + TypeScript + Vite
+💸 Dashboard Application (Next.js + TypeScript + Reduxtoolkit + Zustand + Framer motion + Tailwind CSS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a wallet dashboard built using Next.js, TypeScript, Zustand, Redux Toolkit (RTK Query), and Framer Motion.
+It includes data fetching, filtering, animations, and testing using Jest and React Testing Library with vite.
 
-Currently, two official plugins are available:
+📘 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The dashboard provides:
 
-## React Compiler
+Wallet balance display and withdrawal action
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Transaction listing with live data
 
-## Expanding the ESLint configuration
+Filter sidebar for refining transactions
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Export list button
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Chart visualization for wallet transaction activity
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Floating sidebar navigation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Designed using TailwindCSS
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Smooth slide-in/out animations using Framer Motion
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+🧩 Tech Stack
+| Layer            | Library / Tool                           | Purpose                                     |
+| ---------------- | ---------------------------------------- | ------------------------------------------- |
+| Frontend         | **Next.js (App Router)**                 | Main framework                              |
+| Language         | **TypeScript**                           | Type safety                                 |
+| State Management | **Zustand**                              | Global UI state (e.g., filter tags, counts) |
+| Data Fetching    | **Redux Toolkit Query (RTK Query)**      | User, Wallet and transaction APIs           |
+| Styling          | **Tailwind CSS**                         | Component and layout styling                |
+| Animation        | **Framer Motion**                        | Sidebar and modal animations                |
+| Testing          | **Jest + React Testing Library + Babel** | Component and page testing                  |
+
+
+⚙️ Environment Setup
+Pull code from github: https://github.com/FrankLucky1/mainstack-test
+1️⃣ Install Dependencies
+npm install
+
+2️⃣ Run the App
+npm run dev
+
+
+🧠 Core Logic Overview
+🏠 Home Page
+
+Located in src/app/page.tsx, it:
+
+Fetches wallet and transaction data via RTK Query
+
+Manages filter panel visibility
+
+Uses Zustand to track active filters and tags
+
+Renders components: Header, Chart, WalletTab, FloatingSidebar, Filter, TableItems
+
+
+▶️ Running Tests
+
+Run Jest in watch mode:
+ npx vitest
+
+
+💡 Developer Notes
+
+page.tsx is the root entry page — this replaces Home.tsx in a standard React app.
+
+Zustand is used for UI state only; Redux handles data fetching.
+
+Ensure your API endpoints are live or mocked for full testing.
+
+You can extend tests to cover Zustand store or Redux slices separately.
+
+
+| Feature          | Tool Used                    | Status |
+| ---------------- | ---------------------------- | ------ |
+| State management | Zustand + RTK Query          | ✅      |
+| Animations       | Framer Motion                | ✅      |
+| Testing          | Jest + React Testing Library | ✅      |
+| Styling          | TailwindCSS                  | ✅      |
+| Type safety      | TypeScript                   | ✅      |
+| App router       | Next.js (App Directory)      | ✅      |
+
+
+👨‍💻 Author
+
+Lucky Frank
+Frontend Engineer specializing in React, Next.js, and TypeScript.
+🚀 Building modern interfaces with clean architecture and solid testing practices.
