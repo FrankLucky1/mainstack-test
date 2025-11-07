@@ -39,14 +39,18 @@ Smooth slide-in/out animations using Framer Motion
 
 ⚙️ Environment Setup
 Pull code from github: https://github.com/FrankLucky1/mainstack-test
+
 1️⃣ Install Dependencies
+
 npm install
 
 2️⃣ Run the App
+
 npm run dev
 
 
 🧠 Core Logic Overview
+
 🏠 Home Page
 
 Located in src/app/page.tsx, it:
