@@ -2,15 +2,14 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
-import { Provider } from "react-redux";
-import { store } from "./store.ts";
 import "react-datepicker/dist/react-datepicker.css";
+import { ReduxProvider } from "./providers/ReduxProvider.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Provider store={store}>
+    <ReduxProvider>
       <App />
-    </Provider>
+    </ReduxProvider>
   </StrictMode>
 );
 
